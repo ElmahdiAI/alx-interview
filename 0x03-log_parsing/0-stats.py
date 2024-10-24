@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Log parsing
-"""
+""" Log parsing """
 
 import sys
 
@@ -12,6 +10,7 @@ if __name__ == '__main__':
     stats = {k: 0 for k in codes}
 
     def print_stats(stats: dict, file_size: int) -> None:
+        """print_stats"""
         print("File size: {:d}".format(filesize))
         for k, v in sorted(stats.items()):
             if v:
@@ -37,4 +36,3 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print_stats(stats, filesize)
         raise
-
